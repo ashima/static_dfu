@@ -1,0 +1,11 @@
+git submodule init
+git submodule update
+cd libusb
+./autogen.sh
+./configure
+make
+cd ..
+cd dfu-util
+./autogen.sh
+USB_CFLAGS=-I`pwd`/../libusb/libusb/ USB_LIBS="-L./ -lusb-1.0.0" ./configure
+make
