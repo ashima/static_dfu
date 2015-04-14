@@ -1,0 +1,6 @@
+[submodule "dfu-util"]
+	path = dfu-util
+	url = git@github.com:ashima/dfu-util.git
+[submodule "libusb"]
+	path = libusb
+	url = git@github.com:ashima/libusb
