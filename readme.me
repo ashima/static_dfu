@@ -7,5 +7,5 @@ make
 cd ..
 cd dfu-util
 ./autogen.sh
-USB_CFLAGS=-I`pwd`/../libusb/libusb/ USB_LIBS="-L./ -lusb-1.0.0" ./configure
+ USB_CFLAGS=-I`pwd`/../libusb/libusb/ USB_LIBS="`pwd`/../libusb/libusb/.libs/*.a -Wl,-framework,IOKit -Wl,-framework,CoreFoundation -lobjc" ./configure
 make
